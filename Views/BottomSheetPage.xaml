@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<the49:BottomSheet
+    x:Class="The49.Maui.BottomSheet.Views.BottomSheetPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:the49="https://schemas.the49.com/dotnet/2023/maui"
+    BackgroundColor="{DynamicResource BottomSheetBackgroundColor}"
+    HasBackdrop="False"
+    HasHandle="True"
+    IsCancelable="True">
+
+    <the49:BottomSheet.Resources>
+
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="DodgerBlue" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="HeightRequest" Value="32" />
+            <Setter Property="WidthRequest" Value="100" />
+            <Setter Property="Padding" Value="6,0" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="CornerRadius" Value="6" />
+            <Setter Property="Margin" Value="12,6" />
+        </Style>
+
+        <Style x:Key="Divider" TargetType="BoxView">
+            <Setter Property="HeightRequest" Value="1" />
+            <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            <Setter Property="Color" Value="Silver" />
+        </Style>
+
+    </the49:BottomSheet.Resources>
+
+    <the49:BottomSheet.Detents>
+        <!--<the49:FullscreenDetent />-->
+        <!--<the49:AnchorDetent Anchor="{x:Reference divider}" />-->
+        <!--<the49:RatioDetent Ratio="0.5" />-->
+        <the49:ContentDetent />
+    </the49:BottomSheet.Detents>
+
+    <Grid
+        Margin="0"
+        ColumnDefinitions="*,*,*"
+        RowDefinitions="Auto,3,Auto,Auto">
+        <Label
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Margin="6,18,6,0"
+            FontAttributes="{DynamicResource TipTitleFontAttribute}"
+            HorizontalOptions="CenterAndExpand"
+            HorizontalTextAlignment="Center"
+            Text="{DynamicResource TipTitle}"
+            TextColor="RoyalBlue" />
+        <BoxView
+            x:Name="DividerBoxView"
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Style="{StaticResource Divider}"
+            VerticalOptions="Center" />
+        <Label
+            Grid.Row="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Margin="6,0"
+            LineBreakMode="WordWrap"
+            MaxLines="20"
+            Text="{DynamicResource TipDescription}" />
+
+        <HorizontalStackLayout
+            Grid.Row="3"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Padding="12,0"
+            HorizontalOptions="Center">
+            <Button
+                x:Name="BottomSheetPrimaryBtn"
+                IsVisible="{DynamicResource IsBottomSheetPrimaryButtonVisible}"
+                Text="{DynamicResource BottomSheetPrimaryButtonLabel}" />
+
+            <Button
+                x:Name="BottomSheetSecondaryBtn"
+                IsVisible="{DynamicResource IsBottomSheetSecondaryButtonVisible}"
+                Text="{DynamicResource BottomSheetSecondaryButtonLabel}" />
+        </HorizontalStackLayout>
+
+    </Grid>
+
+</the49:BottomSheet>

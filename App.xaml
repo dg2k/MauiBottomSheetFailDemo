@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Application
+    x:Class="The49.Maui.BottomSheet.App"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:The49.Maui.BottomSheet">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!--  [0] Colors  -->
+                <ResourceDictionary x:Name="Colors" Source="Resources/Colors/Colors.xaml" />
+                <!--  [1 Styles  -->
+                <ResourceDictionary x:Name="Styles" Source="Resources/Styles/Styles.xaml" />
+                <!--  [2] Icon Caption Strings  -->
+                <ResourceDictionary x:Name="DynamicResources" Source="Resources/DynamicResources/DynamicResources.xaml" />
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

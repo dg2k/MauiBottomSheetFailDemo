@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <x:String x:Key="TipTitle">Tip Title</x:String>
+    <x:String x:Key="TipDescription">Tip description</x:String>
+    <FontAttributes x:Key="TipTitleFontAttribute">None</FontAttributes>
+    <x:String x:Key="BottomSheetSecondaryButtonLabel">dismiss</x:String>
+    <x:Boolean x:Key="IsBottomSheetPrimaryButtonVisible">False</x:Boolean>
+    <x:Boolean x:Key="IsBottomSheetSecondaryButtonVisible">False</x:Boolean>
+    <Color x:Key="BottomSheetBackgroundColor">#FFEAF4</Color>
+
+</ResourceDictionary>
